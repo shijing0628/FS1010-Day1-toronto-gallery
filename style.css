@@ -5,7 +5,18 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: #d5d5d5;
+  background: #7f7fd5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #91eae4,
+    #86a8e7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #91eae4,
+    #86a8e7
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   height: 100%;
 }
 
@@ -24,6 +35,26 @@ header > h1 {
   font-size: 50px;
 }
 
+header .effect-shine:hover {
+  color: #fff;
+  -webkit-mask-image: linear-gradient(
+    -75deg,
+    rgba(0, 0, 0, 0.7) 30%,
+    #000 40%,
+    rgba(0, 0, 0, 0.7) 70%
+  );
+  -webkit-mask-size: 200%;
+  animation: shine 2s infinite;
+}
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
 header > h3 {
   font-weight: 400;
   color: #5f5e5e;
@@ -39,6 +70,7 @@ header > h3 {
   grid-template-rows: repeat(7, 6vw);
   grid-gap: 15px;
 }
+
 .gallery__img {
   width: 100%;
   height: 100%;
@@ -46,6 +78,9 @@ header > h3 {
 }
 .gallery__item {
   position: relative;
+}
+.gallery__item:focus {
+  outline: 3px dashed orange;
 }
 .gallery__item--1 {
   grid-column-start: 1;
@@ -135,7 +170,11 @@ footer {
   align-items: center;
 }
 .social-icon {
-  padding-right: 24px;
+  padding-right: 14px;
+  padding-left: 14px;
+}
+.social-icon:focus {
+  outline: 3px dashed orange;
 }
 .social-icon > .fab {
   color: #000;
