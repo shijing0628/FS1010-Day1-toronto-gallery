@@ -8,38 +8,44 @@ body {
   background: #d5d5d5;
   height: 100%;
 }
+
 header {
   height: 10vh;
 }
+
 .container {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   margin-top: 50px;
 }
 
-h1 {
+header > h1 {
   font-weight: 400;
   font-size: 50px;
 }
 
-h3 {
+header > h3 {
   font-weight: 400;
   color: #5f5e5e;
   margin-top: 10px;
   font-size: 30px;
 }
 
+/* gallery images */
 .gallery {
-  margin-top: 65px;
+  margin-top: 75px;
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 5vw);
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(7, 6vw);
   grid-gap: 15px;
 }
 .gallery__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.gallery__item {
+  position: relative;
 }
 .gallery__item--1 {
   grid-column-start: 1;
@@ -49,13 +55,13 @@ h3 {
 }
 .gallery__item--2 {
   grid-column-start: 4;
-  grid-column-end: 6;
+  grid-column-end: 7;
   grid-row-start: 1;
   grid-row-end: 6;
 }
 .gallery__item--3 {
-  grid-column-start: 6;
-  grid-column-end: 9;
+  grid-column-start: 7;
+  grid-column-end: 10;
   grid-row-start: 1;
   grid-row-end: 3;
 }
@@ -67,20 +73,61 @@ h3 {
 }
 .gallery__item--5 {
   grid-column-start: 4;
-  grid-column-end: 6;
+  grid-column-end: 7;
   grid-row-start: 6;
   grid-row-end: 8;
 }
 .gallery__item--6 {
-  grid-column-start: 6;
-  grid-column-end: 9;
+  grid-column-start: 7;
+  grid-column-end: 10;
   grid-row-start: 3;
   grid-row-end: 8;
 }
 
+.image-titles {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  color: #000;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(249, 249, 249);
+  background: linear-gradient(
+    149deg,
+    rgba(249, 249, 249, 1) 0%,
+    rgba(184, 182, 183, 1) 50%
+  );
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: 0.6s ease;
+  opacity: 0;
+}
+
+.gallery__item:hover .overlay {
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 0, 0% 100%, 100% 0);
+  opacity: 0.6;
+}
+
+.image-titles > h3 {
+  font-weight: 800;
+  font-size: 20px;
+}
+.image-titles > h5 {
+  font-weight: 400;
+  margin-top: 8px;
+}
 /* footer icons */
 footer {
   height: 10vh;
+  margin-top: 50px;
 }
 
 .social-icons {
@@ -102,12 +149,13 @@ footer {
   color: #fff;
   padding: 5px;
 }
-.social-icon > .fa-facebook:hover {
+
+.social-icon > .fa-facebook-f:hover {
   background-color: #405d9b;
   color: #fff;
-  padding: 5px;
+  padding: 5px 8px;
 }
-.social-icon > .fa-linkedin:hover {
+.social-icon > .fa-linkedin-in:hover {
   background-color: #0073a4;
   color: #fff;
   padding: 5px;
