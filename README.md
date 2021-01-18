@@ -13,7 +13,7 @@
 **Feature:**
 
 - Hover "Toronto" has shining animation effect.
-- Landing page background using gradient instead of (#d5d5d5).
+- Landing page theme color can be toggled instead of (#d5d5d5).
 - Keyboard tab highlight border for accessibility.
 - Social icons add real links and also consider accessibility.
 - Gallery image display using CSS Grid.
@@ -30,11 +30,15 @@
 - Each page style file: picture1, 3, 5 -> style-image1.css
 - Each page style file: picture2, 4, 6 -> style-image2.css
 - Images store at assets folder
+- All js code in script.js
 
-![](2021-01-17-19-41-33.png)
+![](2021-01-18-17-09-17.png)
 <br>
 
 ![](2021-01-17-12-12-13.png)
+<br>
+
+![](2021-01-18-17-04-26.png)
 <br>
 
 ![](2021-01-17-19-47-18.png)

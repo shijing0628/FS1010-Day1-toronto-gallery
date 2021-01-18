@@ -1,23 +1,28 @@
-* {
+:root {
+  --contrast: #b6eceb;
+  --bgColor: #defcf9;
+}
+
+/* Resets */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
+  --background: #defcf9;
+  --text: #3c3744;
+  --accent: #f49d6e;
+  --socialIcon: #50248f;
   font-family: "Open Sans", sans-serif;
-  background: #7f7fd5; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #b4e0fa,
-    #b6eceb
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #b4e0fa,
-    #b6eceb
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background-color: var(--background);
   height: 100%;
+  color: var(--text);
+  transition: color ease-out 250ms;
+  overflow-x: hidden;
 }
 
 header {
@@ -37,7 +42,7 @@ header > h1 {
 
 header .effect-shine:hover {
   border-bottom: 3px solid tomato;
-  color: #fff;
+  color: tomato;
   -webkit-mask-image: linear-gradient(
     -75deg,
     rgba(0, 0, 0, 0.7) 30%,
@@ -58,11 +63,15 @@ header .effect-shine:hover {
 }
 header > h3 {
   font-weight: 400;
-  color: #5f5e5e;
   margin-top: 10px;
   font-size: 30px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
-
+.theme-color {
+  font-size: 16px;
+}
 /* gallery images */
 .gallery {
   margin-top: 85px;
@@ -178,7 +187,7 @@ footer {
   outline: 3px dashed orange;
 }
 .social-icon > .fab {
-  color: #000;
+  color: var(--socialIcon);
   transition: all 0.5s;
 }
 .social-icon > .fa-twitter:hover {
@@ -276,13 +285,9 @@ footer {
 }
 
 /* landing page first loading animation */
-:root {
-  --contrast: #b6eceb;
-  --bgColor: #defcf9;
-}
+
 #main {
   min-height: 100vh;
-  background-color: var(--bgColor);
 }
 
 .flex {
@@ -330,3 +335,50 @@ footer {
   }
 }
 /* landing page first loading animation */
+
+/* Button resets & styles */
+button {
+  border: none;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+button:focus,
+button:active {
+  outline: none;
+}
+
+button:active {
+  transform: scale(1);
+}
+
+/* Toggle button styles */
+.toggle {
+  background-color: var(--text);
+  min-width: 60px;
+  min-height: 30px;
+  position: relative;
+  border: 2px solid;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color ease-out 250ms;
+}
+
+.toggle::after {
+  content: "";
+  position: absolute;
+  background-color: var(--background);
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  border-radius: 30px;
+  transition: transform ease-out 250ms;
+}
+
+/* Active (dark mode) class for animating transition on toggle button*/
+.toggle.clicked::after {
+  transform: translateX(100%);
+}

@@ -116,6 +116,12 @@ body {
   font-size: 14px;
   color: #00848e;
 }
+.details {
+  color: #06c0a8;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 .logo > img {
   position: absolute;
   top: 10px;
