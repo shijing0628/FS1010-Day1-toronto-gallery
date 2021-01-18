@@ -20,6 +20,7 @@
 - Social icon layout using CSS Flex.
 - Mobile friendly for all pages.
 - In each image page, there is a shadow effect and link to my instagram home page.
+- In image page, use vectary design (3D) my personal workshop logo.
 
 **Files**
 
@@ -46,6 +47,10 @@
 <br>
 
 ![](2021-01-17-17-59-08.png)
+
+<br>
+
+![](2021-01-17-21-06-34.png)
 
 **mobile version**
 <br>
