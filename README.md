@@ -1,4 +1,4 @@
-### Responsive Gallery images page (pure CSS)
+### Responsive Gallery images page (pure CSS to implement)
 
 2021-1-17
 
@@ -13,13 +13,22 @@
 **Feature:**
 
 - Hover "Toronto" has shining animation effect.
-- Landing page background using gradient instead of #d5d5d5.
+- Landing page background using gradient instead of (#d5d5d5).
 - Keyboard tab highlight border for accessibility.
 - Social icons add real links and also consider accessibility.
 - Gallery image display using CSS Grid.
 - Social icon layout using CSS Flex.
 - Mobile friendly for all pages.
 - In each image page, there is a shadow effect and link to my instagram home page.
+
+**Files**
+
+- landing page: index.html
+- Each single page: p1.html ~ p6.html
+- landing page css: style.css
+- Each page style file: picture1, 3, 5 -> style-image1.css
+- Each page style file: picture2, 4, 6 -> style-image2.css
+- Images store at assets folder
 
 ![](2021-01-17-19-41-33.png)
 <br>
