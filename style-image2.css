@@ -100,3 +100,16 @@ body {
   background-color: #06c0a8;
   color: #ffffff;
 }
+@media only screen and (max-width: 847px) {
+  .container__image {
+    position: relative;
+    width: 70%;
+    height: 70%;
+  }
+  .container_content {
+    position: absolute;
+    top: -15%;
+    left: 45%;
+    margin: 0 auto;
+  }
+}
