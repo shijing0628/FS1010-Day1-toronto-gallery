@@ -13,6 +13,7 @@
 **Feature:**
 
 - Hover "Toronto" has shining animation effect.
+- Loading page animation.
 - Landing page theme color can be toggled instead of (#d5d5d5).
 - Keyboard tab highlight border for accessibility.
 - Social icons add real links and also consider accessibility.
